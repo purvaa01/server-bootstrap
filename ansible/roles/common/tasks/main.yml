@@ -1,0 +1,17 @@
+---
+- name: Show hostname
+  command: hostname
+  register: hostname_output
+
+- name: Print hostname
+  debug:
+    msg: "{{ hostname_output.stdout }}"
+
+- name: Show server configuration
+  debug:
+    msg:
+      - "Server Name: {{ server_name }}"
+      - "Environment: {{ server_environment }}"
+      - "Timezone: {{ timezone }}"
+      - "Docker Enabled: {{ docker_enabled }}"
+      - "Monitoring Enabled: {{ monitoring_enabled }}"

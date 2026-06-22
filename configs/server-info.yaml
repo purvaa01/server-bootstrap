@@ -1,0 +1,5 @@
+  server_name: dev-server
+  Environment: development
+  Timezone: Asia/Kolkata
+  docker_enabled: true
+  monitoring_enabled: true
