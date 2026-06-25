@@ -1,0 +1,17 @@
+---
+- name: Add SSH public key for admin user
+  authorized_key:
+    user: "{{ admin_user }}"
+    key: "{{ ssh_public_key }}"
+    state: present
+#
+#  this task when running against a real Ubuntu server (EC2)
+#- name: Configure SSH hardening
+#  template:
+#    src: 99-serverbootstrap.conf.j2
+#    dest: /etc/ssh/sshd_config.d/99-serverbootstrap.conf
+#    owner: root
+#    group: root
+#    mode: '0644'
+#  notify: Restart SSH
+#  when: ssh_hardening_enabled

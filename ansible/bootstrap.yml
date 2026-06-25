@@ -10,3 +10,5 @@
     - common
     - packages
     - docker
+    - users
+    - ssh
